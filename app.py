@@ -45,7 +45,13 @@ ALL_PEERS = [c for c in COLORS if c != "Mexico"]
 # st.cache_data ensures it only downloads once per session.
 @st.cache_data
 def load_data():
-    url = "https://covid.ourworldindata.org/data/owid-covid-data.csv"
+    import requests, io
+
+    url = "https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.csv"
+
+    headers = {"User-Agent": "Mozilla/5.0"}
+    response = requests.get(url, headers=headers, timeout=60)
+    response.raise_for_status()
 
     needed = [
         "iso_code", "continent", "location", "date",
@@ -60,7 +66,7 @@ def load_data():
     ]
 
     df = pd.read_csv(
-        url,
+        io.StringIO(response.text),
         usecols=lambda c: c in needed,
         parse_dates=["date"],
         low_memory=False
