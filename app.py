@@ -730,24 +730,18 @@ st.markdown("<br>", unsafe_allow_html=True)
 r1, r2 = st.columns(2)
 
 recs = [
-    ("1. Reduce diabetes and chronic disease rates now — not during the next crisis",
-     "Mexico's diabetes burden existed long before COVID-19 arrived. It will still be there "
-     "before the next outbreak. Every year of investment in nutrition programs, preventive care, "
-     "and early screening reduces the number of people at high risk when the next pathogen emerges."),
-    ("2. Expand public hospital capacity, particularly outside major cities",
-     "Mexico had fewer hospital beds than most peers going into the pandemic. "
-     "When cases surged, the system ran out of room. Expanding capacity in public hospitals — "
-     "especially in lower-income regions — directly determines how many severe cases can be treated."),
-    ("3. Build a permanent early detection and testing network",
-     "Mexico tested far fewer people than comparable countries. This meant the country "
-     "could not see the wave coming until it had already arrived. "
-     "A permanent, nationwide testing infrastructure would give decision-makers weeks of "
-     "advance warning — enough time to act before hospitals are overwhelmed."),
-    ("4. Pre-negotiate vaccine supply agreements before the next emergency",
-     "Chile's advantage was not just speed — it was preparation. "
-     "Chile had agreements with multiple vaccine manufacturers signed in advance. "
-     "Mexico should formalize equivalent agreements now, "
-     "so they are ready to activate the moment a new threat is confirmed."),
+    ("1. Reduce diabetes rates now — not during the next crisis",
+     "Mexico's diabetes burden existed before COVID and will exist before the next outbreak. "
+     "Investing in prevention today directly reduces the number of high-risk people tomorrow."),
+    ("2. Expand hospital capacity outside major cities",
+     "When cases surged, the system ran out of room. More beds in underserved regions "
+     "means more lives saved when the next emergency hits."),
+    ("3. Build a permanent testing network",
+     "Mexico couldn't see the wave coming until it had already arrived. "
+     "A nationwide testing system gives decision-makers time to act before hospitals are overwhelmed."),
+    ("4. Pre-negotiate vaccine agreements before the next emergency",
+     "Chile's advantage was preparation, not luck. "
+     "Mexico needs supply agreements signed in advance — ready to activate the moment a new threat appears."),
 ]
 
 for i, (title, text) in enumerate(recs):
